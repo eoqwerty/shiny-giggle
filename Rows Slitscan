@@ -21,7 +21,7 @@ void captureEvent(Capture video){
 void draw(){
   int w = video.width;
   int h = video.height;
-  copy(video, w/2, 0, 1, h, x, 0+row*(h/4), 1, h*(row+1)/4);
+  copy(video, w/2, 0, 1, h, x, 0+row*(h/4), 1, h/4);
   //image(video, 0, 0);
   if (x==w){
     row++;
