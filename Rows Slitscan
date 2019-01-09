@@ -1,0 +1,31 @@
+/*Creator: Emilia Ochoa
+  Date created: 11/29/18
+  Date last modified: 1/2/18
+  */
+
+//imports "video" library from Processing language
+import processing.video.*;
+Capture video;
+
+int x = 0;
+int row = 0;
+void setup(){
+  size(640, 240);
+  video = new Capture(this, 320, 240);
+  video.start();
+}
+
+void captureEvent(Capture video){
+  video.read();
+}
+void draw(){
+  int w = video.width;
+  int h = video.height;
+  copy(video, w/2, 0, 1, h, x, 0+row*(h/4), 1, h*(row+1)/4);
+  //image(video, 0, 0);
+  if (x==w){
+    row++;
+    x = 0;
+  }
+  else x = x+1;
+}
