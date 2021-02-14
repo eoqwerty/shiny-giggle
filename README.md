@@ -1,4 +1,4 @@
-# shiny-giggle
+# slitscanCam
 Slitscan Photo Generator compatible through Processing
 
 Hello! This code was written by Emi Ochoa in November 2018 as part of my senior year Capstone Project. 
